@@ -3,18 +3,39 @@ namespace myclass;
 
 include_once('Encryption.php');
 
-use Encryption;
+use Encryption\Encryption;
 
-$myObj = new Encryption();
+/**
+ * Factory Pattern method.
+ */
+class EncryptionFactory
+{
+    public static function create($painText)
+    {
+        return new Encryption($painText);
+    }
+}
 
-$testData = "Abhijeet1";
+$testData = "Abhijeet.Kalsi";
 
-echo '<br>Original Data: ' . $testData;
+// have the factory create the Encryption object
+$myObj = EncryptionFactory::create($testData);
 
-$encryptedData = $myObj->encrypt($testData);
+echo '<br><br>Original Plain Text: ' . $testData;
 
-echo '<br>encrypted Data: ' . $encryptedData;
+// Calls to Encrypt Methods.
+$encryptedData = $myObj->encrypt();
 
-$newData = $myObj->decrypt($encryptedData);
+if ($encryptedData) {
+    echo '<br><br> Encrypted Data: ' . $encryptedData;
+} else {
+    echo '<br><br>Sorry! Encryption Fails';
+}
+// Calls to Encrypt Methods.
+$newData = $myObj->decrypt();
 
-echo '<br>New Data: ' . $newData;
+if ($newData) {
+    echo '<br><br>Decoded Data: ' . $newData;
+} else {
+    echo '<br><br>Sorry! Decryption Fails';
+}

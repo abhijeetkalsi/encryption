@@ -2,9 +2,9 @@
 
 namespace Encryption;
 
-include 'Cryptography.php';
+require_once('Cryptography.php');
 
-use Cryptography;
+use Cryptography\Cryptography;
 
 /**
  * Provides cryptographic services,
@@ -79,55 +79,3 @@ class Encryption implements Cryptography
         return $output;
     }
 }
-
-/**
- * Factory Pattern method.
- */
-class EncryptionFactory
-{
-    public static function create($painText)
-    {
-        return new Encryption($painText);
-    }
-}
-
-$testData = "Abhijeet1";
-
-// have the factory create the Encryption object
-$myObj = EncryptionFactory::create($testData);
-
-echo '<br><br>Original Plain Text: ' . $testData;
-
-// Calls to Encrypt Methods.
-$encryptedData = $myObj->encrypt();
-
-if ($encryptedData) {
-    echo '<br><br> Encrypted Data: ' . $encryptedData;
-} else {
-    echo '<br><br>Sorry! Encryption Fails';
-}
-// Calls to Encrypt Methods.
-$newData = $myObj->decrypt();
-
-if ($newData) {
-    echo '<br><br>Decoded Data: ' . $newData;
-} else {
-    echo '<br><br>Sorry! Encryption Fails';
-}
-
-/*
-
-$myObj = new Encryption();
-
-$testData = "Abhijeet1";
-
-echo '<br>Original Data: ' . $testData;
-
-$encryptedData = $myObj->encrypt($testData);
-
-echo '<br>encrypted Data: ' . $encryptedData;
-
-$newData = $myObj->decrypt($encryptedData);
-
-echo '<br>New Data: ' . $newData;
-*/

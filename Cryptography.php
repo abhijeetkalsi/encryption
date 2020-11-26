@@ -22,5 +22,3 @@ interface Cryptography
      */
     public function decrypt();
 }
-
-?>
