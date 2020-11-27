@@ -1,6 +1,7 @@
 ** Encryption Assignment**
 
 ### **Class Structure**
+```
 |- lib/
 |   - Cryptography.php
 |   - Encryption.php
@@ -10,6 +11,7 @@
 |-EncryptUnitTest.php
 |- composer.json
 |- composer.lock
+```
 
 - Cryptography Interface
 - Encryption Implements Cryptographer
