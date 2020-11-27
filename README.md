@@ -1,5 +1,23 @@
-**# Encryption Assignment**
+** Encryption Assignment**
 
+### **Class Structure**
+|- lib/
+|   - Cryptography.php
+|   - Encryption.php
+|   - EncryptionFactory.php
+|- Vendor/
+|- Cipher.php
+|-EncryptUnitTest.php
+|- composer.json
+|- composer.lock
+
+- Cryptography Interface
+- Encryption Implements Cryptographer
+  - Encrypt Methos
+  - Decrypt Method
+- EncryptionFactory method for Encryption
+   Helps to modify, rename, or replace the Encryption class later on you can do so and you will
+   only have to modify the code in the factory.
 
 **Output**
 
@@ -10,7 +28,6 @@ Encrypted Data: bDVwZ0JWTkpPekNtaEwxR295ZGFJQT09
 
 Decoded Data: Abhijeet.Kalsi
 ```
-
 
 ---------------
 
