@@ -1,20 +1,9 @@
 <?php
 namespace Cipher;
 
-include_once('Encryption.php');
+include_once('lib/EncryptionFactory.php');
 
-use Encryption\Encryption;
-
-/**
- * Factory Pattern method.
- */
-class EncryptionFactory
-{
-    public static function create($painText)
-    {
-        return new Encryption($painText);
-    }
-}
+use EncryptionFactory\EncryptionFactory;
 
 $testData = "Abhijeet.Kalsi";
 
