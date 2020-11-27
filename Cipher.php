@@ -1,5 +1,5 @@
 <?php
-namespace myclass;
+namespace Cipher;
 
 include_once('Encryption.php');
 
@@ -19,12 +19,12 @@ class EncryptionFactory
 $testData = "Abhijeet.Kalsi";
 
 // have the factory create the Encryption object
-$myObj = EncryptionFactory::create($testData);
+$CipherObj = EncryptionFactory::create($testData);
 
 echo '<br><br>Original Plain Text: ' . $testData;
 
 // Calls to Encrypt Methods.
-$encryptedData = $myObj->encrypt();
+$encryptedData = $CipherObj->encrypt();
 
 if ($encryptedData) {
     echo '<br><br> Encrypted Data: ' . $encryptedData;
@@ -32,7 +32,7 @@ if ($encryptedData) {
     echo '<br><br>Sorry! Encryption Fails';
 }
 // Calls to Encrypt Methods.
-$newData = $myObj->decrypt();
+$newData = $CipherObj->decrypt();
 
 if ($newData) {
     echo '<br><br>Decoded Data: ' . $newData;
