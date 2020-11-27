@@ -24,7 +24,7 @@
 - EncryptionFactory method for Encryption
    Helps to modify, rename, or replace the Encryption class later on you can do so and you will
    only have to modify the code in the factory.
-- Index.php that load Autoload Vendor via PS-4 autoload method
+- Index.php that load Autoload Vendor via PSR-4 autoload method
 
 **Output**
 
