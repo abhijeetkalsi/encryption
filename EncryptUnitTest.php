@@ -2,11 +2,9 @@
 
 namespace EncryptUnitTest;
 
-//declare(strict_types=1);
-include_once('lib/EncryptionFactory.php');
-
 use PHPUnit\Framework\TestCase;
-use EncryptionFactory\EncryptionFactory;
+
+use Crypto\EncryptionsFactory\EncryptionFactory as EncryptFact;
 
 /**
  * Unit Test Class.
@@ -22,7 +20,7 @@ final class EncryptUnitTest extends TestCase
         $testData = "Abhijeet.Kalsi";
 
         // Have the factory create the Encryption object
-        $CipherObj = EncryptionFactory::create($testData);
+        $CipherObj = EncryptFact::create($testData);
         
         echo 'Original Plain Text 1: ' . $testData;
         // Calls to Encrypt Methods.
@@ -38,7 +36,7 @@ final class EncryptUnitTest extends TestCase
          */
         $testData = "SRIJAN";
         // Have the factory create the Encryption object
-        $CipherObj = EncryptionFactory::create($testData);
+        $CipherObj = EncryptFact::create($testData);
       
         echo '\nOriginal Plain Text 2: ' . $testData;
         
