@@ -3,11 +3,15 @@
 ### **Class Structure**
 ```
 |- lib/
-|   - Cryptography.php
-|   - Encryption.php
-|   - EncryptionFactory.php
+|  - Crypto/
+|    - Cryptograph/
+|      - CryptographInterface.php
+|    - Encryptions/
+|      - Encryption.php
+|    - EncryptionsFactory/
+|      - EncryptionFactory.php
 |- Vendor/
-|- Cipher.php
+|- index.php
 |-EncryptUnitTest.php
 |- composer.json
 |- composer.lock
@@ -20,6 +24,7 @@
 - EncryptionFactory method for Encryption
    Helps to modify, rename, or replace the Encryption class later on you can do so and you will
    only have to modify the code in the factory.
+- Index.php that load Autoload Vendor via PS-4 autoload method
 
 **Output**
 
