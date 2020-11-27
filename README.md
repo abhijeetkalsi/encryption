@@ -1,4 +1,4 @@
-** Encryption Assignment**
+### ** Encryption Assignment**
 
 ### **Class Structure**
 ```
@@ -12,7 +12,7 @@
 |      - EncryptionFactory.php
 |- Vendor/
 |- index.php
-|-EncryptUnitTest.php
+|- EncryptUnitTest.php
 |- composer.json
 |- composer.lock
 ```
